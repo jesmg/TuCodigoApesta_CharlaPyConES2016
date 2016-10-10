@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Tu código apesta, pero puedes tomar medidas</title>
+	<meta name="author" content="Jesús Marín García">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<h1>Tu código apesta</h1>
+				<h2>Pero puedes tomar medidas</h2>
+			</section>
+
+			<section>
+				Jesús Marín
+				<p>
+					<br> Email: <a href="mailto:contacto@jesusmg.org">contacto@jesusmg.org</a>
+					<br> Twitter: <a href="http://twitter.com/_jesusmg" target="_blank">@_jesusmg</a>
+				</p>
+			</section>
+
+			<section>
+				<h2>Estado actual</h2>
+			</section>
+
+			<section>
+				¿Por qué preocuparme?
+			</section>
+
+			<section>
+				<h3>Django</h3>
+				<h3>26 de septiembre, 2016</h3>
+				Una interacción entre Django y Google Analytics permitía crear cookies arbitrarías (CSRF).
+				<br>
+				<p style="bottom: 0px;"><small><a href="https://www.djangoproject.com/weblog/2016/sep/26/security-releases/" target="_blank">https://www.djangoproject.com/weblog/2016/sep/26/security-releases/</a></small></p>
+			</section>
+
+			<section>
+				<h3>18 de julio, 2016</h3>
+				Ataque XSS
+				<br>
+				<p style="bottom: 0px;"><small><a href="https://www.djangoproject.com/weblog/2016/jul/18/security-releases/" target="_blank">https://www.djangoproject.com/weblog/2016/jul/18/security-releases/</a></small></p>
+			</section>
+
+			<section>
+				<ul>
+					<li>Septiembre</li>
+					<li>Julio</li>
+					<li class="fragment">Marzo (¡2!)</li>
+					<li class="fragment">Febrero</li>
+					<li class="fragment">Noviembre</li>
+					<li class="fragment">Agosto</li>
+					<li class="fragment">Julio (¡3!)</li>
+				</ul>
+				<p style="bottom: 0px;"><small><a href="https://docs.djangoproject.com/es/1.10/releases/security/" target="_blank">https://docs.djangoproject.com/es/1.10/releases/security/</a></small></p>				
+			</section>
+
+			<section>
+				<h3>1 de abril, 2016</h3>
+				<h3>Python 8</h3>
+				<blockquote>
+					Ya no será posible importar un módulo que no respete PEP 8 
+					<br>
+					[...]
+					<br>
+					Aun podrás importar tu código antiguo añadiendo el sufijo "_noqa"
+				</blockquote>
+				<p style="bottom: 0px;"><small><a href="https://mail.python.org/pipermail/python-dev/2016-March/143603.html" target="_blank">https://mail.python.org/pipermail/python-dev/2016-March/143603.html</a></small></p>
+			</section>
+
+			<section>
+				<h3>CVE</h3>
+				MITRE y US-CERT
+			</section>
+
+			<section>
+				<img src="./img/CVEByYear.png">
+				<p style="bottom: 0px;"><small><a href="https://web.nvd.nist.gov/view/vuln/statistics-results?adv_search=true&cves=on&cvss_version=3" target="_blank">Fuente (NIST)</a></small></p>				
+			</section>
+
+			<section>
+				<img src="./img/CVEByYearMediumHigh.png">
+				<p style="bottom: 0px;"><small><a href="https://web.nvd.nist.gov/view/vuln/statistics-results?adv_search=true&cves=on&cvss_version=2&cvss_v2_severity=MEDIUM_HIGH" target="_blank">Fuente (NIST)</a></small></p>				
+			</section>
+
+			<section>
+				<img src="./img/CVESeverity.png">
+				<p style="bottom: 0px;"><small><a href="https://nvd.nist.gov/visualizations/cvss-severity-distribution-over-time" target="_blank">Fuente (NIST)</a></small></p>				
+			</section>
+
+			<section>
+				<h2>Estado deseado</h2>
+			</section>
+
+			<section>
+				<h3>Brecha de datos</h3>
+				<ul>
+					<li>Coste medio: 4$ millones</li>
+					<li>158$ por registro</li>
+					<li>¡Hasta 355$ por registro!</li>
+				</ul>
+				<p style="bottom: 0px;"><small><a href="http://www-03.ibm.com/security/infographics/data-breach/" target="_blank">Fuente (IBM)</a></small></p>				
+			</section>
+
+			<section>
+				<ul>
+					<li>Aplicación "totalmente" segura</li>
+					<li>Esfuerzo mínimo</li>
+					<li>Coste mínimo</li>
+				</ul>
+			</section>
+
+			<section>
+				<img src="./img/CostSDLC.png">
+				<p style="bottom: 0px;"><small><a href="https://www.ibm.com/devops/method/experience/deliver/dibbe_edwards_devops_shift_left/" target="_blank">Fuente (IBM)</a></small></p>
+			</section>
+
+			<section>
+				<img src="./img/CostSDLCNist.png">
+				<p style="bottom: 0px;"><small><a href="https://www.nist.gov/sites/default/files/documents/director/planning/report02-3.pdf" target="_blank">Informe (NIST)</a>, <a href="https://www.microsoft.com/en-us/sdl/about/benefits.aspx">visualización (Microsoft)</a></small></p>
+			</section>
+
+			<section>
+				<h3>¿Cómo lo hacemos?</h3>
+				<p class="fragment">
+					Ciclo de vida del desarrollo del software
+				</p>
+			</section>
+
+			<section>
+				<h3>Diseño...</h3>
+			</section>
+
+			<section>
+				<h3>Casos de mal uso</h3>
+				<img src="./img/misuseDiagram.jpg">
+				<p style="bottom: 0px;"><small><a href="https://www.owasp.org/index.php/Application_Threat_Modeling" target="_blank">Fuente (OWASP)</a></small></p>
+			</section>
+
+			<section>
+				<h3>Análisis de modelo de amenazas</h3>
+				<img src="./img/threatModeling.png">
+				<p style="bottom: 0px;"><small><a href="https://technet.microsoft.com/en-us/security/dn140238.aspx" target="_blank">Fuente (Microsoft)</a></small></p>
+			</section>
+
+			<section>
+				<h3>Análisis de modelo de amenazas</h3>
+				<img src="./img/sdlModelingTool.jpg">
+				<p style="bottom: 0px;"><small><a href="http://blogs.microsoft.com/microsoftsecure/2012/08/23/microsofts-free-security-tools-threat-modeling/" target="_blank">Fuente (Microsoft)</a></small></p>
+			</section>
+
+			<section>
+				<h3>Programación...</h3>
+			</section>
+
+			<section>
+				<p>
+					<h3>Principios de codificación segura</h3>
+					<br>
+					<em>Escribiendo código seguro - Howard y Leblanc</em>
+				</p>
+			</section>
+
+			<section>
+				Minimizar la superficie de ataque
+			</section>
+
+			<section>
+				Seguridad por defecto
+			</section>
+
+			<section>
+				Defensa en profundidad
+			</section>
+
+			<section>
+				Todo sistema externo es inseguro
+			</section>
+
+			<section>
+				<h3>Guías de estilo: PEP 8</h3>
+			</section>
+
+			<section>
+				<h3>Olor del codigo</h3>
+				<ul>
+					<li>Métodos largos</li>
+					<li>Código duplicado</li>
+					<li>Hombre en el medio</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Refactorización</h3>
+				<span class="fragment">
+					<blockquote>
+						Although I own the book, and I've read it twice, I felt it was too prescriptive – if you see (x), then you must do (y). Any programmer worth his or her salt should already be refactoring aggressively. It's so essential to the craft that if you have to read a book to understand how it works, you probably shouldn't be a programmer in the first place.
+					</blockquote>
+					<p style="bottom: 0px;"><small><a href="https://blog.codinghorror.com/code-smells/" target="_blank">Coding horror</a></small></p>
+				<span>
+			</section>
+
+			<section>
+				<h3>Testing...</h3>
+			</section>
+
+			<section>
+				<ul>
+					<li>Revisión de codigo (<a href="https://www.owasp.org/index.php/Category:OWASP_Code_Review_Project/es" target="_blank">Guia OWASP</a>)</li>
+					<li>Pentesting</li>
+					<li>Fuzzing (<a href="https://www.microsoft.com/en-us/springfield/" target="_blank">Proyecto Springfield</a>)</li>
+					<li>Escáners de código</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2><a href="https://sonarqube.com/dashboard/index?id=pyffi" target="_blank">Hora de la demo</a></h2>
+				<p class="fragment">PyFFI: The Python File Format Interface</p>
+			</section>
+
+			<section>
+				<img src="./img/SonarDemo1.png">
+			</section>
+
+			<section>
+				<img src="./img/SonarDemo2.png">
+			</section>
+
+			<section>
+				<img src="./img/SonarDemo3.png">
+			</section>
+
+			<section>
+				<h2>¡Gracias!</h2>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				keyboard: true,
+				overview: true,
+				showNotes: false,
+				history: true,
+				center: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+</body>
+
+</html>
